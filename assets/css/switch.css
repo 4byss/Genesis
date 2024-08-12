@@ -1,0 +1,87 @@
+body{
+    background-color: #222222;
+}
+
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text {
+    position: relative;
+    letter-spacing: 2px;
+}
+
+#text:hover {
+    background: transparent;
+}
+
+#text::before,
+#text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100%;
+    z-index: -1;
+}
+
+#text::before {
+    color: #ff00c1;
+    animation: glitch-effect 1s infinite;
+}
+
+#text::after {
+    color: #3498db;
+    animation: glitch-effect 3s infinite;
+}
+
+@keyframes glitch-effect {
+    0% {
+        left: -3px;
+        top: -2px;
+    }
+
+    10% {
+        left: 3px;
+        top: -2px;
+    }
+
+    20% {
+        left: -3px;
+        top: 0px;
+    }
+    
+    30% {
+        left: 2px;
+        top: 0px;
+        border: 1px solid #ff00c1;
+    }
+
+    80% {
+        left: -2px;
+        top: 2px;
+    }
+    
+    90% {
+        left: 2px;
+        top: -1px;
+        border: 1px solid #3498db;
+    }
+
+    100% {
+        left: 0px;
+        top: -2px;
+    }
+}
+
+#text::before {
+    animation-delay: 3s;
+}
+
+#text::after {
+    animation-delay: 3s;
+}
