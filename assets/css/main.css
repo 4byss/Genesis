@@ -66,6 +66,26 @@ body {
   font-family: var(--default-font);
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #18d26e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #059652;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
