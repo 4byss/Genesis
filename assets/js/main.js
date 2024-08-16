@@ -202,3 +202,16 @@
 })();
 
 
+// content display
+var x = document.getElementById("more-details");
+var y = document.getElementById("content-display-button");
+
+function display_content() {
+  if (x.style.display === "block") {
+    x.style.display = "none";
+    y.innerHTML = "show more...";
+  } else {
+    x.style.display = "block";
+    y.innerHTML = "show less...";
+  }
+}
