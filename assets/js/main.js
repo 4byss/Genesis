@@ -203,15 +203,36 @@
 
 
 // content display
-var x = document.getElementById("more-details");
-var y = document.getElementById("content-display-button");
+// var x = document.getElementById("more-details");
+// var y = document.getElementById("content-display-button");
 
-function display_content() {
-  if (x.style.display === "block") {
-    x.style.display = "none";
-    y.innerHTML = "show more...";
-  } else {
-    x.style.display = "block";
-    y.innerHTML = "show less...";
-  }
-}
+// function display_content() {
+//   if (x.style.display === "block") {
+//     x.style.display = "none";
+//     y.innerHTML = "show more...";
+//   } else {
+//     x.style.display = "block";
+//     y.innerHTML = "show less...";
+//   }
+// }
+
+
+// active nav display
+let sec = document.querySelectorAll('section');
+let links = document.querySelectorAll('nav a');
+
+window.onscroll = () => {
+  sec.forEach(section => {
+    let top = window.scrollY;
+    let offset = section.offsetTop - 300;
+    let height = section.offsetHeight;
+    let id = section.getAttribute('id');
+
+    if (top >= offset && top < offset + height) {
+      links.forEach(link => {
+        link.classList.remove('active');
+        document.querySelector('nav a[href*=' + id + ']').classList.add('active');
+      })
+    }
+  })
+};
