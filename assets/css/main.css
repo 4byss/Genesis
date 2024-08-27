@@ -69,6 +69,12 @@
   scroll-behavior: smooth;
 }
 
+/* Page Selection Highlight */
+::selection {
+  background-color: var(--accent-color);
+  color: #000000;
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
