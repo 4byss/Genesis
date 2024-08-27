@@ -71,7 +71,7 @@
 
 /* Page Selection Highlight */
 ::selection {
-  background-color: var(--accent-color);
+  background-color: #b89f5dc4;
   color: #000000;
 }
 
