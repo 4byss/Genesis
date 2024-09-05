@@ -71,7 +71,7 @@
 
 /* Page Selection Highlight */
 ::selection {
-  background-color: #b89f5dc4;
+  background-color: var(--accent-color);
   color: #000000;
 }
 
@@ -248,16 +248,17 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
+    font-size: 10px;
     padding: 0 2px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
+    letter-spacing: 3px;
   }
 
   .navmenu a i,
@@ -387,11 +388,12 @@ h6 {
     padding: 10px 20px;
     font-family: var(--nav-font);
     font-size: 17px;
-    font-weight: 500;
+    font-weight: 100;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
+    letter-spacing: 3px;
     transition: 0.3s;
   }
 
@@ -631,7 +633,7 @@ h6 {
 
 .page-title .heading h1 {
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 100;
 }
 
 .page-title nav {
@@ -645,7 +647,7 @@ h6 {
   list-style: none;
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 100;
 }
 
 .page-title nav ol li+li {
@@ -1513,8 +1515,16 @@ section,
 }
 
 /*--------------------------------------------------------------
-# More Details Section
+# Footer Menu
 --------------------------------------------------------------*/
-#more-details {
-  display: none;
+.footer_menu {
+  color: var(--accent-color);
+}
+
+.footer_ul_menu {
+  color: #fff;
+}
+
+.footer_menu:hover {
+  
 }
